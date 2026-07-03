@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Websiteli Demo Websites</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #f7f7f7; color: #111; }
+    main { max-width: 980px; margin: 0 auto; padding: 56px 20px; }
+    .hero { background: white; border: 1px solid #ddd; border-radius: 28px; padding: 40px; box-shadow: 0 20px 80px rgba(0,0,0,.06); }
+    .eyebrow { color: #e30613; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+    h1 { font-size: clamp(36px, 6vw, 72px); line-height: .95; margin: 16px 0; }
+    p { font-size: 18px; line-height: 1.65; color: #333; }
+    a { color: #111; font-weight: 700; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 28px; }
+    .card { background: white; border: 1px solid #ddd; border-radius: 20px; padding: 22px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #111; color: white; text-decoration: none; padding: 14px 20px; margin-top: 10px; }
+    .demo-list { margin-top: 28px; display: grid; gap: 12px; }
+    .demo-link { display: block; background: white; border: 1px solid #ddd; border-radius: 18px; padding: 18px; text-decoration: none; }
+    .demo-link span { display: block; color: #555; font-weight: 400; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Websiteli sales demos</div>
+      <h1>Personalized demo websites for potential clients.</h1>
+      <p>This public GitHub Pages site hosts review-ready demo websites created for Websiteli outreach. Each prospect demo lives under <code>/prospects/prospect-slug/</code> and includes a clear note that it is a concept demo, not the prospect's official website.</p>
+      <a class="button" href="https://websiteli.ch/">Visit Websiteli</a>
+    </section>
+
+    <section class="demo-list" aria-label="Current demos">
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-dogmopolite/">Dogmopolite concept demo <span>Hungarian redesign and booking-flow concept.</span></a>
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-mango-kutyakozmetika/">Mangó Kutyakozmetika concept demo <span>Hungarian dog-grooming website concept.</span></a>
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-alpine-glow-studio/">Alpine Glow Studio sample demo <span>Fictional sample used only for pipeline testing.</span></a>
+    </section>
+
+    <section class="grid" aria-label="Operating rules">
+      <article class="card">
+        <h2>Daily workflow</h2>
+        <p>The scheduled ChatGPT job selects one strong lead, creates a tailored static demo in this repo, pushes it to <code>main</code>, then GitHub Pages deploys it automatically.</p>
+      </article>
+      <article class="card">
+        <h2>Safety rule</h2>
+        <p>Do not impersonate a business or copy protected brand assets. Use public facts only and label every demo as a Websiteli concept preview.</p>
+      </article>
+      <article class="card">
+        <h2>Email outreach</h2>
+        <p>After deployment, the Gmail connector can send the prospect a short email with the demo link and the main Websiteli link.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

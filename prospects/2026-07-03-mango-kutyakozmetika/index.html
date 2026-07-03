@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Mangó Kutyakozmetika — Websiteli koncepció demo</title>
+  <meta name="description" content="Személyre szabott Websiteli koncepció demo egy magyar kutyakozmetika számára." />
+  <style>
+    :root {
+      --ink:#121212; --paper:#fffaf2; --white:#fff; --orange:#f28c28; --dark:#2f1f12; --muted:#665c52; --line:rgba(18,18,18,.12); --green:#1f7a4d;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink)} a{color:inherit}.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,250,242,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}.brand{font-weight:900;font-size:25px;letter-spacing:-.04em}.navlinks{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;text-decoration:none;font-weight:850;border:1px solid var(--line);background:var(--white)}.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;min-height:720px;padding:72px 0}.tag{display:inline-flex;border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 13px;color:var(--green);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:20px}
+    h1{font-size:clamp(44px,7vw,92px);line-height:.9;letter-spacing:-.075em;margin:0}.lead{font-size:21px;line-height:1.65;color:var(--muted);max-width:650px;margin:24px 0 0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .dog-card{min-height:560px;border-radius:46px;background:radial-gradient(circle at 70% 18%,#fff 0 13%,transparent 14%),linear-gradient(145deg,#fff7e8,#ffd8a4 42%,#f28c28);border:1px solid var(--line);padding:28px;display:flex;align-items:end;box-shadow:0 34px 100px rgba(242,140,40,.20)}
+    .mini{background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.7);border-radius:32px;padding:28px;width:100%;box-shadow:0 20px 70px rgba(0,0,0,.12)}.mini strong{display:block;font-size:30px;letter-spacing:-.04em}.mini p{color:var(--muted);line-height:1.6}
+    section{padding:72px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:0 18px 60px rgba(0,0,0,.045)}.card h3{font-size:25px;letter-spacing:-.04em;margin:0 0 10px}.card p{color:var(--muted);line-height:1.7}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}.panel{background:var(--dark);color:#fff;border-radius:38px;padding:38px}.panel p{color:rgba(255,255,255,.72);line-height:1.7}.list{display:grid;gap:14px;margin-top:22px}.item{display:flex;gap:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:16px}.paw{width:14px;height:14px;border-radius:50%;background:var(--orange);margin-top:7px;flex:0 0 auto}
+    .cta{text-align:center;background:var(--white);border:1px solid var(--line);border-radius:42px;padding:54px 24px}.cta h2{font-size:clamp(34px,5vw,68px);line-height:.95;letter-spacing:-.065em;margin:0 auto 18px;max-width:780px}
+    .notice{background:#111;color:#fff;padding:16px 20px;text-align:center;font-size:14px;line-height:1.5}.notice a{color:#fff;font-weight:800} footer{border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:30px 0 44px;color:var(--muted);line-height:1.6}
+    @media(max-width:850px){.hero,.split,.grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:46px}.dog-card{min-height:420px}nav{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="notice">Ez egy <strong>Websiteli koncepció demo</strong>, nem a Mangó Kutyakozmetika hivatalos weboldala. A cél: megmutatni, milyen lehetne egy modern, mobilbarát, ügyfélszerző weboldal.</div>
+  <header><div class="wrap"><nav><div class="brand">Mangó Kutyakozmetika</div><div class="navlinks"><a class="btn" href="#szolgaltatasok">Szolgáltatások</a><a class="btn primary" href="#idopont">Időpontkérés</a></div></nav></div></header>
+  <main>
+    <section class="wrap hero">
+      <div><span class="tag">Kutyakozmetika · bizalom · egyszerű időpontkérés</span><h1>Ápolt kutyus, nyugodt gazdi, profi online első benyomás.</h1><p class="lead">Egy friss, magyar nyelvű bemutatóoldal-koncepció kutyakozmetikának: tiszta szolgáltatásstruktúra, mobilon gyors kapcsolatfelvétel, bizalomépítő tartalom és Google-barát felépítés.</p><div class="actions"><a class="btn primary" href="#idopont">Időpontot kérek</a><a class="btn" href="#miert">Miért működik?</a></div></div>
+      <div class="dog-card" aria-label="Barátságos kutyakozmetika vizuál"><div class="mini"><strong>Első látogatás egyszerűen</strong><p>Rövid bemutatkozás, szolgáltatások, előkészítési tippek és egy jól látható kapcsolatgomb, hogy a gazdi gyorsan tudjon dönteni.</p></div></div>
+    </section>
+    <section id="szolgaltatasok" class="wrap"><div class="grid"><article class="card"><h3>Fürdetés és szárítás</h3><p>Átlátható szolgáltatásleírás segít, hogy a gazdi értse, mire számíthat és milyen kutyáknak ajánlott.</p></article><article class="card"><h3>Nyírás és fazonigazítás</h3><p>A weboldal külön kiemelheti a kistestű, közepes és hosszú szőrű kutyusok kezelését.</p></article><article class="card"><h3>Karomvágás és higiénia</h3><p>Gyors szolgáltatásoknál fontos a könnyű mobilos kapcsolatfelvétel és a pontos nyitvatartási információ.</p></article></div></section>
+    <section id="miert" class="wrap split"><div><span class="tag">Websiteli megközelítés</span><h2 style="font-size:clamp(36px,5vw,68px);line-height:.95;letter-spacing:-.06em;margin:0;">A jó weboldal nem csak szép, hanem dolgozik is.</h2><p class="lead">Egy helyi szolgáltatásnál a látogató gyorsan akar választ: hol van a vállalkozás, milyen szolgáltatások vannak, lehet-e időpontot kérni, milyen a hangulat, és bízhat-e a szolgáltatóban.</p></div><div class="panel"><h3 style="font-size:32px;margin:0 0 8px;letter-spacing:-.04em;">Mit javítana ez a demo?</h3><p>Ez a struktúra segíthet több érdeklődőt eljuttatni a kapcsolatfelvételig.</p><div class="list"><div class="item"><span class="paw"></span><div><strong>Mobilbarát első képernyő</strong><br><span>A legtöbb gazdi telefonról keres szolgáltatást.</span></div></div><div class="item"><span class="paw"></span><div><strong>Átlátható szolgáltatások</strong><br><span>Kevesebb bizonytalanság, gyorsabb döntés.</span></div></div><div class="item"><span class="paw"></span><div><strong>Bizalomépítő tartalom</strong><br><span>Rövid folyamatleírás, GYIK, előtte-utána helyek, értékelések.</span></div></div><div class="item"><span class="paw"></span><div><strong>Google-barát felépítés</strong><br><span>Helyi kulcsszavak, tiszta címsorok és külön szekciók.</span></div></div></div></div></section>
+    <section id="idopont" class="wrap"><div class="cta"><span class="tag">Demo CTA</span><h2>Kérjen időpontot pár kattintással.</h2><p class="lead" style="margin-left:auto;margin-right:auto;">Ezen a ponton a valódi weboldalon megjelenhetne a telefonszám, e-mail, nyitvatartás, Google Térkép vagy egy időpontfoglaló űrlap.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://websiteli.ch/?utm_source=demo&utm_medium=outreach&utm_campaign=mango_kutyakozmetika">Ilyen weboldalt szeretnék</a><a class="btn" href="mailto:mangookutyakozmetika@gmail.com">Minta e-mail gomb</a></div></div></section>
+  </main>
+  <footer><div class="wrap foot"><p><strong>Fontos:</strong> ez egy Websiteli által készített, nem hivatalos koncepció demo, kizárólag bemutatási céllal.</p><p>Készítette: <a href="https://websiteli.ch/?utm_source=demo&utm_medium=outreach&utm_campaign=mango_kutyakozmetika">Websiteli</a></p></div></footer>
+</body>
+</html>

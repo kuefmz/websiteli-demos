@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Alpine Glow Studio — Websiteli Concept Demo</title>
+  <meta name="description" content="A fictional Websiteli concept demo for a small beauty and wellness studio website." />
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --cream: #f8f3ed;
+      --rose: #b85c70;
+      --dark-rose: #7e3445;
+      --muted: #5f5a57;
+      --line: rgba(17,17,17,.12);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--black); }
+    a { color: inherit; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(248,243,237,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { max-width: 1160px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 900; letter-spacing: -.04em; font-size: 24px; }
+    .pill { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 999px; padding: 11px 16px; text-decoration: none; font-weight: 800; background: var(--white); }
+    .primary { background: var(--black); color: var(--white); border-color: var(--black); }
+    main { overflow: hidden; }
+    section { max-width: 1160px; margin: 0 auto; padding: 76px 20px; }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 34px; align-items: center; min-height: 720px; }
+    .notice { display: inline-flex; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: var(--white); color: var(--dark-rose); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    h1 { font-size: clamp(48px, 7vw, 96px); line-height: .9; letter-spacing: -.07em; margin: 0; }
+    .lead { color: var(--muted); font-size: 21px; line-height: 1.65; max-width: 650px; margin: 24px 0 0; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .visual { min-height: 560px; border-radius: 44px; background: radial-gradient(circle at 30% 20%, #fff 0 16%, transparent 17%), linear-gradient(145deg, #fff, #ead9d6 45%, #bd6b7b); border: 1px solid var(--line); box-shadow: 0 30px 100px rgba(126,52,69,.18); padding: 28px; display: flex; align-items: end; }
+    .visual-card { background: rgba(255,255,255,.86); border: 1px solid rgba(255,255,255,.7); border-radius: 32px; padding: 28px; width: 100%; box-shadow: 0 20px 70px rgba(0,0,0,.12); }
+    .visual-card strong { display: block; font-size: 28px; letter-spacing: -.04em; margin-bottom: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: 28px; padding: 28px; box-shadow: 0 18px 60px rgba(0,0,0,.04); }
+    .card h3 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.03em; }
+    .card p, .split p, .footer p { color: var(--muted); line-height: 1.7; }
+    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: center; }
+    .panel { background: var(--black); color: var(--white); border-radius: 36px; padding: 38px; }
+    .panel p { color: rgba(255,255,255,.72); }
+    .list { display: grid; gap: 14px; margin-top: 22px; }
+    .item { display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); padding: 16px; border-radius: 20px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--rose); margin-top: 7px; flex: 0 0 auto; }
+    .cta { text-align: center; background: var(--white); border: 1px solid var(--line); border-radius: 40px; padding: 54px 24px; }
+    .cta h2 { font-size: clamp(34px, 5vw, 68px); letter-spacing: -.06em; line-height: .95; margin: 0 auto 18px; max-width: 760px; }
+    footer { border-top: 1px solid var(--line); }
+    .footer { max-width: 1160px; margin: 0 auto; padding: 28px 20px 44px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    code { background: rgba(17,17,17,.06); padding: 3px 6px; border-radius: 8px; }
+    @media (max-width: 820px) {
+      .hero, .split, .grid { grid-template-columns: 1fr; }
+      .hero { min-height: unset; padding-top: 48px; }
+      .visual { min-height: 420px; }
+      .nav { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">Alpine Glow Studio</div>
+      <a class="pill primary" href="#booking">Book a consultation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="notice">Websiteli concept demo — fictional sample</span>
+        <h1>Beauty, wellness and calm in the heart of your city.</h1>
+        <p class="lead">A conversion-focused demo website for a small beauty studio: clear treatments, trust-building sections, mobile-first booking, and local SEO structure designed to turn silent visitors into enquiries.</p>
+        <div class="actions">
+          <a class="pill primary" href="#booking">View booking flow</a>
+          <a class="pill" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="visual" aria-label="Abstract beauty studio visual">
+        <div class="visual-card">
+          <strong>First visit offer</strong>
+          <p>Skin consultation + personalized treatment plan. Designed to make the next step simple and reassuring.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="grid">
+        <article class="card">
+          <h3>Facial treatments</h3>
+          <p>Clear treatment descriptions help visitors understand what fits their skin goals before they message or book.</p>
+        </article>
+        <article class="card">
+          <h3>Brows & lashes</h3>
+          <p>Service cards can show duration, starting price, preparation tips, and aftercare expectations.</p>
+        </article>
+        <article class="card">
+          <h3>Wellness rituals</h3>
+          <p>Soft positioning, calming copy, and simple CTAs create a premium but approachable client journey.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split">
+      <div>
+        <span class="notice">Why this demo works</span>
+        <h2 style="font-size:clamp(36px,5vw,68px);letter-spacing:-.06em;line-height:.95;margin:0;">A website should do more than look pretty.</h2>
+        <p>For local service businesses, the website needs to answer buyer questions quickly: what you offer, who it is for, why people trust you, how much it costs, and how to book. This sample is structured around that conversion path.</p>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:32px;margin-top:0;letter-spacing:-.04em;">Built for enquiries</h3>
+        <div class="list">
+          <div class="item"><span class="dot"></span><div><strong>Clear service hierarchy</strong><br><span>Visitors can scan treatments without getting lost.</span></div></div>
+          <div class="item"><span class="dot"></span><div><strong>Mobile-first CTA</strong><br><span>Booking stays visible and easy on small screens.</span></div></div>
+          <div class="item"><span class="dot"></span><div><strong>Trust content</strong><br><span>Testimonials, FAQs, process, and aftercare can be added.</span></div></div>
+          <div class="item"><span class="dot"></span><div><strong>Local SEO structure</strong><br><span>Pages can target city, treatment, and client-intent searches.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="cta">
+        <span class="notice">Demo call to action</span>
+        <h2>Ready to turn visitors into booked appointments?</h2>
+        <p class="lead" style="margin-left:auto;margin-right:auto;">This is a fictional demo built by Websiteli to show how a small service business website can feel polished, trustworthy, and practical from the first screen.</p>
+        <div class="actions" style="justify-content:center;">
+          <a class="pill primary" href="https://websiteli.ch/?utm_source=demo&utm_medium=outreach&utm_campaign=sample_demo">Create a website like this</a>
+          <a class="pill" href="mailto:hello@example.com">Sample contact button</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p><strong>Important:</strong> Alpine Glow Studio is a fictional demo brand. This page is not an official website for a real business.</p>
+      <p>Concept by <a href="https://websiteli.ch/?utm_source=demo&utm_medium=outreach&utm_campaign=sample_demo">Websiteli</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
