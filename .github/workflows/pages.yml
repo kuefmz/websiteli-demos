@@ -1,4 +1,4 @@
-name: Deploy demo sites
+name: Build static demo site
 
 on:
   push:
@@ -7,21 +7,26 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+
+      - name: Prepare public site
+        run: |
+          rm -rf public-site
+          mkdir -p public-site
+          cp -R index.html prospects prompts docs README.md public-site/ 2>/dev/null || true
+          touch public-site/.nojekyll
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: .
-      - name: Deploy Pages
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public-site
+          publish_branch: gh-pages
+          force_orphan: true
