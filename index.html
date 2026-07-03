@@ -17,6 +17,9 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 28px; }
     .card { background: white; border: 1px solid #ddd; border-radius: 20px; padding: 22px; }
     .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #111; color: white; text-decoration: none; padding: 14px 20px; margin-top: 10px; }
+    .demo-list { margin-top: 28px; display: grid; gap: 12px; }
+    .demo-link { display: block; background: white; border: 1px solid #ddd; border-radius: 18px; padding: 18px; text-decoration: none; }
+    .demo-link span { display: block; color: #555; font-weight: 400; margin-top: 6px; }
   </style>
 </head>
 <body>
@@ -24,8 +27,14 @@
     <section class="hero">
       <div class="eyebrow">Websiteli sales demos</div>
       <h1>Personalized demo websites for potential clients.</h1>
-      <p>This public GitHub Pages site hosts review-ready demo websites created for Websiteli outreach. Each prospect demo should live under <code>/prospects/prospect-slug/</code> and include a clear note that it is a concept demo, not the prospect's official website.</p>
+      <p>This public GitHub Pages site hosts review-ready demo websites created for Websiteli outreach. Each prospect demo lives under <code>/prospects/prospect-slug/</code> and includes a clear note that it is a concept demo, not the prospect's official website.</p>
       <a class="button" href="https://websiteli.ch/">Visit Websiteli</a>
+    </section>
+
+    <section class="demo-list" aria-label="Current demos">
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-dogmopolite/">Dogmopolite concept demo <span>Hungarian redesign and booking-flow concept.</span></a>
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-mango-kutyakozmetika/">Mangó Kutyakozmetika concept demo <span>Hungarian dog-grooming website concept.</span></a>
+      <a class="demo-link" href="/websiteli-demos/prospects/2026-07-03-alpine-glow-studio/">Alpine Glow Studio sample demo <span>Fictional sample used only for pipeline testing.</span></a>
     </section>
 
     <section class="grid" aria-label="Operating rules">
