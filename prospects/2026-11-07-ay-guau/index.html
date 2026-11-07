@@ -90,11 +90,12 @@
         <div>
           <p class="eyebrow"><span class="dot"></span> 04 / AGENDA</p>
           <h2 id="agenda-titulo">Su próximo <em>apapacho.</em></h2>
-          <p>Elige un servicio, encuentra un horario y recibe la confirmación por correo.</p>
+          <p id="booking-intro">Consulta cómo funcionaría la agenda en línea.</p>
           <p class="demo-notice"><strong>Agenda de demostración.</strong> Las reservas de prueba no son citas con AY! GUAU.</p>
         </div>
         <div class="scheduler">
-          <p class="eyebrow scheduler-label">PASO 1 / ELIGE UN SERVICIO</p>
+          <p class="eyebrow scheduler-label" id="scheduler-label">PASO 1 / ELIGE UN SERVICIO</p>
+          <button class="button" id="calendly-open" type="button" aria-controls="calendar" aria-expanded="false" hidden>Ver horarios de prueba <span aria-hidden="true">↗</span></button>
           <form id="booking-form" hidden>
             <label for="booking-service">Servicio de demostración</label>
             <select id="booking-service" required><option value="">Selecciona un servicio</option></select>
@@ -105,7 +106,7 @@
             <li><span>Estética canina</span><span>75 min</span></li>
             <li><span>Corte de uñas</span><span>15 min</span></li>
           </ul>
-          <p class="muted">Duraciones de ejemplo. Horarios de Ciudad de México.</p>
+          <p class="muted" id="booking-duration-note">Duraciones de ejemplo. Horarios de Ciudad de México.</p>
           <p class="booking-status" id="booking-status" role="status">La agenda de prueba está desactivada.</p>
           <a id="booking-fallback" class="text-link" hidden target="_blank" rel="noopener noreferrer">Abrir agenda en otra pestaña <span aria-hidden="true">↗</span></a>
         </div>

@@ -26,7 +26,22 @@ photos of the dogs, the grooming process, and the actual studio. Update alt
 text, image dimensions, captions and Open Graph metadata when replacing them.
 Replace the temporary wordmark and icon with owner-approved logo files.
 
-## Why Cal.com
+## Temporary Calendly preview
+
+The live preview currently uses the existing Websiteli 30-minute Calendly event,
+as approved for temporary use. The visitor sees a warning before opening the
+embed. Confirming a booking can reserve real time on the Websiteli calendar.
+The event's calendar destination has not been verified. No booking was submitted
+during deployment verification.
+
+Set `enabled: false` in `booking-config.js` and redeploy to remove booking from
+the preview. The original Calendly link remains controlled by Websiteli.
+Use a dedicated grooming event for client use. The
+[Calendly Free plan](https://calendly.com/pricing) supports one event type and
+one calendar connection. To return to Cal.com, clear `calendlyUrl` and follow
+the setup below with public booking disabled until approved.
+
+## Cal.com setup for separate grooming services
 
 The [Cal.com Individuals plan](https://site.cal.com/pricing) is free for one
 scheduler and supports multiple event links and calendars. The optional Teams
