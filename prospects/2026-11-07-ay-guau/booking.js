@@ -20,20 +20,50 @@ const fallback = document.querySelector('#booking-fallback');
 const validLink = /^[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+$/;
 const services = bookingConfig.services.filter(({ calLink }) => validLink.test(calLink));
 const origin = 'https://app.cal.com';
+const calendlyLink = /^https:\/\/calendly\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+$/;
 let scriptLoad;
 let attempt = 0;
 let timeout;
 
-if (bookingConfig.enabled && services.length === bookingConfig.services.length && services.length > 0) {
+if (bookingConfig.enabled && bookingConfig.calendlyUrl) {
+  if (calendlyLink.test(bookingConfig.calendlyUrl)) {
+    setupCalendly(bookingConfig.calendlyUrl);
+  } else {
+    status.textContent = 'La agenda de prueba no está disponible en este momento.';
+  }
+} else if (bookingConfig.enabled && services.length === bookingConfig.services.length && services.length > 0) {
   services.forEach(({ name, minutes }, index) => {
     serviceSelect.add(new Option(`${name} · ${minutes} min`, String(index)));
   });
   examples.hidden = true;
   form.hidden = false;
+  document.querySelector('#booking-intro').textContent = 'Elige un servicio, encuentra un horario y recibe la confirmación por correo.';
   status.textContent = 'Selecciona un servicio para consultar la disponibilidad.';
   form.addEventListener('submit', showCalendar);
 } else if (bookingConfig.enabled) {
   status.textContent = 'La agenda de prueba no está disponible en este momento.';
+}
+
+function setupCalendly(url) {
+  const button = document.querySelector('#calendly-open');
+  document.querySelector('#booking-intro').textContent = 'Prueba cómo sería reservar en línea con una sesión de 30 minutos.';
+  document.querySelector('#scheduler-label').textContent = 'PRUEBA TEMPORAL / WEBSITELI';
+  document.querySelector('#booking-duration-note').hidden = true;
+  examples.hidden = true;
+  status.textContent = 'Al confirmar, apartas un horario real en la agenda de Websiteli.';
+  button.hidden = false;
+  fallback.href = url;
+  fallback.hidden = false;
+  button.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = url;
+    frame.title = 'Agenda de prueba de Websiteli en Calendly';
+    calendar.classList.add('calendly-calendar');
+    calendar.replaceChildren(frame);
+    calendar.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    frame.focus();
+  }, { once: true });
 }
 
 function loadCal() {

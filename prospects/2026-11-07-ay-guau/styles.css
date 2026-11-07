@@ -97,6 +97,11 @@ h3 { font-size:1.27rem; letter-spacing:-.035em; }
 #booking-service { width:100%; border:1px solid #777c92; border-radius:.45rem; padding:.6rem .5rem; min-height:2.75rem; background:#fff; color:var(--ink); font:inherit; }
 #calendar { grid-column:1/-1; min-width:0; border-radius:.8rem; background:white; color:var(--ink); }
 #calendar iframe { max-width:100%; }
+#calendly-open { margin-top:.8rem; }
+.calendly-calendar iframe { display:block; width:100%; height:760px; border:0; border-radius:.8rem; }
+@media (max-width: 22.5rem) {
+  .calendly-calendar { margin-inline:-1.25rem; }
+}
 .contact-grid { display:grid; gap:1.3rem; }
 .contact-grid > div { border-top:1px solid var(--line); padding-top:1rem; }
 .contact-grid h3 { margin-bottom:.7rem; }
