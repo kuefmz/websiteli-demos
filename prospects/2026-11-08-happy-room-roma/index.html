@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Una mesa en la Roma · Demo para Häppy Room</title>
+<style>
+:root{color-scheme:dark;--bg:#15121a;--panel:#211b28;--ink:#fff8e8;--muted:#c9bdce;--line:#493a50;--yellow:#f9e577;--pink:#ffa4ce}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 12% 35%,#332039 0,transparent 49%),var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+.shell{max-width:1110px;margin:auto;padding:0 clamp(18px,5vw,60px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:20px 0}
+.brand{font-weight:850;letter-spacing:.1em;text-transform:uppercase;font-size:.82rem}
+.badge,.eyebrow{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--pink)}
+.badge{border:1px solid var(--line);border-radius:99px;padding:5px 9px;text-align:center}
+main{display:grid;grid-template-columns:1fr 1.1fr;align-items:start;gap:clamp(24px,6vw,80px);padding:clamp(30px,6vw,66px) 0}
+h1{font-size:clamp(3.5rem,8.5vw,7rem);letter-spacing:-.095em;line-height:.85;margin:22px 0;color:var(--yellow)}
+h1 em{font-weight:650;color:var(--ink)}
+h2{margin:0;font-size:1.65rem;letter-spacing:-.035em}
+p{margin:8px 0;color:var(--muted)}
+.intro p{max-width:35ch}
+.art{display:block;width:min(270px,75%);margin:23px 0 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,31px);box-shadow:0 24px 50px #0c071345}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+label{display:grid;gap:5px;font-size:.85rem;font-weight:650;min-width:0}
+input,select,button{font:inherit}
+input,select{background:#17131d;color:var(--ink);padding:9px 10px;border:1px solid var(--line);border-radius:10px;width:100%;min-width:0;min-height:46px}
+button{cursor:pointer;border:0;border-radius:10px;background:var(--yellow);color:#211629;font-weight:800;padding:12px 15px;min-height:46px}
+button.secondary{background:transparent;border:1px solid var(--line);color:var(--ink)}
+button:disabled{opacity:.48;cursor:default}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.small{font-size:.82rem}
+.message{white-space:pre-wrap;overflow-wrap:anywhere;background:#18131e;border-left:3px solid var(--pink);padding:13px;border-radius:4px 12px 12px 4px;margin-top:12px}
+#status{min-height:1.4em}
+.owner{margin-bottom:34px}
+.owner summary{cursor:pointer;font-weight:800}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}
+.metric{background:#17131d;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:.8rem}
+.metric strong{display:block;color:var(--yellow);font-size:1.75rem}
+footer{border-top:1px solid var(--line);padding:17px 0 25px;color:var(--muted);font-size:.8rem}
+[hidden]{display:none!important}
+@media(max-width:720px){main{grid-template-columns:1fr}.art{display:none}}
+@media(max-width:370px){.grid{grid-template-columns:1fr}.metric{padding:6px}}
+</style>
+</head>
+<body><div class="shell">
+<header><div class="brand">Roma Sur / CDMX</div><div class="badge">Demo de Websiteli · No oficial</div></header>
+<main>
+<section class="intro">
+<div class="eyebrow">Propuesta para Häppy Room</div>
+<h1>Una mesa<br><em>en la Roma.</em></h1>
+<p>Elige cuándo y con quién vienes. Así se vería tu solicitud antes de pasar a WhatsApp.</p>
+<svg class="art" aria-hidden="true" viewBox="0 0 280 185" fill="none">
+<ellipse cx="133" cy="94" rx="107" ry="58" transform="rotate(-19 133 94)" stroke="#75516b" stroke-dasharray="4 7"/>
+<circle cx="124" cy="91" r="67" stroke="#f9e577" stroke-width="2"/>
+<path d="M98 79v10m42-10v10m-42 18q22 31 45 0" stroke="#f9e577" stroke-width="5" stroke-linecap="round"/>
+<path d="M188 27v35m-17-17h35m14 65v19m-9-9h19M45 45v21M35 55h20" stroke="#ffa4ce" stroke-width="2"/>
+<circle cx="210" cy="151" r="5" fill="#ffa4ce"/>
+</svg>
+</section>
+<section class="card" aria-labelledby="reserva">
+<div class="eyebrow">01 / Solicitud de mesa</div>
+<h2 id="reserva">Arma tu plan</h2>
+<p class="small">Horarios de ejemplo. El equipo confirma disponibilidad por chat.</p>
+<form id="request">
+<div class="grid">
+<label>Fecha<input type="date" name="date" required></label>
+<label>Hora<select name="time" required><option value="">Elige una hora</option><option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option></select></label>
+<label>Personas<select name="party" required><option value="">Elige el tamaño</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 o más</option></select></label>
+<label>Plan (opcional)<select name="occasion"><option value="">Sin plan especial</option><option>Cumpleaños</option><option>After office</option><option>Reunión con amigos</option></select></label>
+</div>
+<div class="actions"><button type="submit">Preparar mensaje →</button><button type="button" class="secondary" id="example">Usar ejemplo</button></div>
+</form>
+<div id="preview" hidden>
+<div class="message" id="message"></div>
+<div class="actions"><button id="handoff">Simular clic a WhatsApp</button></div>
+</div>
+<p class="small" id="status" role="status"></p>
+<p class="small">Los datos de esta demo se quedan en esta pestaña. No se envían mensajes.</p>
+</section>
+</main>
+<details class="card owner" id="owner">
+<summary>02 / Vista del equipo · Datos simulados</summary>
+<p class="small">Prueba los pasos por separado. En el bar, el equipo registraría los mensajes recibidos y las mesas confirmadas.</p>
+<div class="metrics" aria-live="polite">
+<div class="metric"><strong id="clicks">0</strong>Clics a WhatsApp</div>
+<div class="metric"><strong id="received">0</strong>Solicitudes recibidas</div>
+<div class="metric"><strong id="confirmed">0</strong>Mesas confirmadas</div>
+</div>
+<div class="actions"><button id="receive" disabled>Simular recepción</button><button id="confirm" disabled>Simular confirmación</button><button class="secondary" id="reset">Reiniciar demo</button></div>
+</details>
+<footer>Prototipo independiente para conversación comercial · Sin conexión a WhatsApp ni a sistemas de reservación</footer>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const form = $('request');
+const date = form.elements.date;
+const mexicoDate = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Mexico_City', year:'numeric', month:'2-digit', day:'2-digit'});
+const spanishDate = new Intl.DateTimeFormat('es-MX', {weekday:'long', day:'numeric', month:'long', timeZone:'UTC'});
+date.min = mexicoDate.format(new Date());
+let clicks = 0, received = 0, confirmed = 0;
+function renderCounts() {
+  $('clicks').textContent = clicks;
+  $('received').textContent = received;
+  $('confirmed').textContent = confirmed;
+  $('receive').disabled = received >= clicks;
+  $('confirm').disabled = confirmed >= received;
+}
+function clearPreview() {
+  $('preview').hidden = true;
+  $('message').textContent = '';
+  $('status').textContent = '';
+}
+form.addEventListener('input', clearPreview);
+$('example').addEventListener('click', () => {
+  date.value = mexicoDate.format(new Date(Date.now() + 2 * 86400000));
+  form.elements.time.value = '20:00';
+  form.elements.party.value = '4';
+  form.elements.occasion.value = 'Cumpleaños';
+  form.requestSubmit();
+});
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = new FormData(form);
+  const day = spanishDate.format(new Date(date.value + 'T12:00:00Z'));
+  const plan = data.get('occasion');
+  $('message').textContent = '¡Hola! ¿Tienen mesa para ' + data.get('party') + ' el ' + day + ' a las ' + data.get('time') + '?' + (plan ? '\nPlan: ' + plan + '.' : '') + '\n¡Gracias!';
+  $('preview').hidden = false;
+  $('handoff').disabled = false;
+  $('status').textContent = 'Tu mensaje de ejemplo está listo.';
+  $('handoff').focus();
+});
+$('handoff').addEventListener('click', () => {
+  clicks += 1;
+  $('handoff').disabled = true;
+  $('owner').open = true;
+  $('status').textContent = 'Clic simulado. En este punto, el cliente todavía tendría que enviar el mensaje.';
+  renderCounts();
+});
+$('receive').addEventListener('click', () => { received += 1; renderCounts(); });
+$('confirm').addEventListener('click', () => { confirmed += 1; renderCounts(); });
+$('reset').addEventListener('click', () => {
+  clicks = received = confirmed = 0;
+  form.reset();
+  clearPreview();
+  renderCounts();
+});
+</script>
+</body></html>
